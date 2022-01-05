@@ -1,0 +1,15 @@
+Berikut ini perintah-perintah untuk cek versi kernel:
+1. uname -a : menampilkan semua informasi kernel
+2. uname -r : menampilkan release kernel
+3. uname -v : menampilkan versi kernel
+4. uname -o : menampilkan sistem operasi kernel
+5. cat /proc/version
+6. cat /proc/sys/kernel/{ostype,osrelease,version}
+
+Perintah-perintah untuk mengecek versi linux:
+1. cat /etc/*release
+2. lsb_release -a
+3. cat /etc/*release
+4. cat /etc/issue atau cat /etc/issue.net
+Jika Anda ingin menampilkan list/daftar semua kernel yang terinstall di linux, gunakan perintah ini :
+1. dpkg --list | grep linux-image

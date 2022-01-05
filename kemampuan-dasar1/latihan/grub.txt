@@ -1,0 +1,1 @@
+Boot laptop masing-masing, perhatikan proses booting dari awal, jika muncul Grub, usahakan melihat parameter dari Grub tersebut. Cari informasi di Internet tentang parameter Grub tersebut. Simpan hasil anda pada file teks biasa dengan nama file grub.txt

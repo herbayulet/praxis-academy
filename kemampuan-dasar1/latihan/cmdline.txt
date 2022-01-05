@@ -1,0 +1,11 @@
+Perintah-perintah di linux tulis hasil dari masing-masing perintah tersebut ke dalam file cmdline.txt (minimal 10) :
+1. mkdir directoryname digunakkan untuk membuat directory di linux
+2. touch filename.txt digunakkan untuk membuat file di linux
+3. rm filename.txt digunakkan untuk menghapus file di linux
+4. mv /path /new/path untuk memindahkan file di linux
+5. rmdir namadirectory untuk menghapus directory
+6. history digunakkan untuk menampilkan history perintah yang pernah ditulis
+7. clear untuk membersihkan perintah perintah yang pernah kita tulis di terminal
+8. ls menampilkan list file dan directory dari lokasi directory kita saat ini
+9. pwd digunakkan untuk menampilkan lokasi directory mana sekarang kita berada
+10. free menampilkan informasi memory yang available maupun yang used.
