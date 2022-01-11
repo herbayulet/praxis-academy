@@ -36,6 +36,7 @@ let e = a * b;
 let f = a / b;
 let g = a % b;
 let h = (a + b) * 2;
+console.log(c, d, e, f, g, h);
 if (a > b) {
   console.log("Large");
 } else if (e < c) {
@@ -43,7 +44,6 @@ if (a > b) {
 } else {
   console.log("jangan bingung");
 }
-console.log(c, d, e, f, g, h);
 
 // Tipe data boolean
 console.log(a > b);
