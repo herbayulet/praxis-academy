@@ -5,7 +5,6 @@ console.log("===================");
 //tipe data string
 let namaDepan = "Herbayu";
 let namaBelakang = "Eko Nugroho";
-
 let fullName;
 console.log((fullName = `Nama saya adalah ${namaDepan} ${namaBelakang}`));
 
