@@ -37,7 +37,7 @@ let f = a / b;
 let g = a % b;
 let h = (a + b) * 2;
 console.log(c, d, e, f, g, h);
-if (a > b) {
+if (b > c) {
   console.log("Large");
 } else if (e < c) {
   console.log("Small");
