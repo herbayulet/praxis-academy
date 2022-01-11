@@ -63,8 +63,8 @@ console.log(mobil);
 let motor = ["Suzuki, Yamaha, Kawasaki"];
 let kendaraan = mobil.concat(motor);
 console.log(kendaraan);
-const numbers = [45, 4, 9, 16, 25];
 
+const numbers = [45, 4, 9, 16, 25];
 let txt = "";
 // perulangan dalam array menggunakan forEach
 numbers.forEach(myFunction);
