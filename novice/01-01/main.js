@@ -2,7 +2,7 @@ var first = "hello world";
 console.log(first);
 console.log("===================");
 
-// pengenalan variabel
+//tipe data string
 let namaDepan = "Herbayu";
 let namaBelakang = "Eko Nugroho";
 
@@ -11,7 +11,6 @@ console.log((fullName = `Nama saya adalah ${namaDepan} ${namaBelakang}`));
 
 console.log("===================");
 
-//tipe data string
 var x;
 x = "John";
 
