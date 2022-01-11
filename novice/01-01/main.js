@@ -70,7 +70,7 @@ let txt = "";
 numbers.forEach(myFunction);
 
 function myFunction(value) {
-  txt += value + ", ";
+  txt += value + " ";
 }
 console.log(txt);
 console.log("=================");
@@ -80,7 +80,7 @@ const car = { type: "BMW", model: "500", color: "silver", price: "Rp 1.000.000.0
 console.log(`Saya punya mobil ${car.type} dengan model ${car.model} yang warna nya ${car.color} seharga ${car.price}`);
 
 //tipe data pengkondisian
-let rapot = 100;
+let rapot = 74;
 if (rapot >= 85) {
   console.log("memenuhi KKM");
 } else if (rapot >= 75) {
