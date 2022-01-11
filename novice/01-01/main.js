@@ -78,6 +78,27 @@ console.log("=================");
 const car = { type: "BMW", model: "500", color: "silver", price: "Rp 1.000.000.000" };
 console.log(`Saya punya mobil ${car.type} dengan model ${car.model} yang warna nya ${car.color} seharga ${car.price}`);
 
+let obj = [
+  {
+    id: 1,
+    nama: "herbayu",
+    kelas: "frontend-react",
+  },
+  {
+    id: 2,
+    nama: "angger",
+    kelas: "mobile-reactnative",
+  },
+  {
+    id: 3,
+    nama: "aulia",
+    kelas: "backend-phyton",
+  },
+];
+obj.forEach((i) => {
+  console.log(i.nama);
+});
+
 //tipe data pengkondisian & aritmatika
 let rapot = 74;
 if (rapot >= 85) {
