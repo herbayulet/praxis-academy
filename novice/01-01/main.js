@@ -79,4 +79,14 @@ console.log("=================");
 const car = { type: "BMW", model: "500", color: "silver", price: "Rp 1.000.000.000" };
 console.log(`Saya punya mobil ${car.type} dengan model ${car.model} yang warna nya ${car.color} seharga ${car.price}`);
 
-//
+//tipe data pengkondisian
+let rapot = 100;
+if (rapot >= 85) {
+  console.log("memenuhi KKM");
+} else if (rapot >= 75) {
+  console.log("sedikit memuaskan");
+} else if (rapot >= 60) {
+  console.log("kurang memuaskan");
+} else {
+  console.log("tidak lulus");
+}
