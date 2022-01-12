@@ -76,9 +76,21 @@ let txt = "";
 let j = 2;
 
 do {
-  txt += "nama-nama makanan" + makanans[j];
+  txt += "Nama-nama Makanan " + makanans[j];
   j++;
 } while (makanans[j] < 5);
 {
   console.log(txt);
+}
+
+console.log("==================");
+
+const namaKades = "Sugiono";
+const namaCamat = "Agus";
+const jabatan = "KADES";
+
+if (jabatan !== "KADES") {
+  console.log(namaKades);
+} else {
+  console.log(namaCamat);
 }
