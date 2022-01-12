@@ -96,7 +96,7 @@ let obj = [
   },
 ];
 obj.forEach((i) => {
-  console.log(i.nama);
+  console.log(i.nama.concat(i.kelas));
 });
 
 //tipe data pengkondisian & aritmatika
