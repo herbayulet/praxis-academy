@@ -83,6 +83,7 @@ do {
   console.log(txt);
 }
 
+// Case seko Mas Nizar
 console.log("==================");
 
 const namaKades = "Sugiono";
@@ -93,4 +94,15 @@ if (jabatan !== "KADES") {
   console.log(namaKades);
 } else {
   console.log(namaCamat);
+}
+
+console.log("==================");
+
+const apakahBoss = true;
+const apakahMiniBoss = false;
+
+if (apakahBoss && !apakahMiniBoss) {
+  console.log("Naik Level");
+} else {
+  console.log("Masih Cupu");
 }
