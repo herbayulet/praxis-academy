@@ -1,5 +1,3 @@
-const { default: jit } = require("tailwindcss/lib/jit");
-
 // tipe pengkondisian If ... if else
 let hour = 12;
 if (hour >= 17) {
@@ -9,9 +7,10 @@ if (hour >= 17) {
 } else {
   console.log("selamat pagi");
 }
-
+console.log("==================");
 // tipe pengkondisian switch
-switch (hour) {
+let jam = 15;
+switch (jam) {
   case 1:
     console.log("jangan begadang");
     break;
@@ -27,7 +26,7 @@ switch (hour) {
   default:
     break;
 }
-
+console.log("==================");
 // tipe looping for
 let hari = new Date().getDay();
 for (let i = 0; i <= hari; i++) {
@@ -45,7 +44,7 @@ for (let i = 0; i <= hari; i++) {
       break;
   }
 }
-
+console.log("==================");
 // tipe looping for in
 const peserta = { id: 1, nama: "herbayu", kelas: "Frontend-React" };
 
@@ -54,24 +53,24 @@ for (let x in peserta) {
   namaPeserta += peserta[x] + " ";
 }
 console.log(namaPeserta);
-
+console.log("==================");
 // tipe looping for of
-const makanans = ["Bakso", " Mie Ayam", " Ketoprak", " Soto", " Gado-gado"];
+const makanans = ["Bakso ", "Mie Ayam ", "Ketoprak ", "Soto ", "Gado-gado "];
 let namaMakanan = "";
 for (const makanan of makanans) {
   namaMakanan += makanan;
 }
 console.log(namaMakanan);
-
+console.log("==================");
 // looping dengan while
 let text = "";
 let i = 0;
-while (i <= makanans.length) {
-  text += "Berbagai macam makanan sesuai index: " + [i] + "\n";
+while (i < makanans.length) {
+  text += "nama-nama makanan " + makanans[i] + "\n";
   i++;
 }
 console.log(text);
-
+console.log("==================");
 // looping dengan while do
 let txt = "";
 let j = 2;
