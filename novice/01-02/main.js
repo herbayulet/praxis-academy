@@ -106,3 +106,10 @@ if (apakahBoss && !apakahMiniBoss) {
 } else {
   console.log("Masih Cupu");
 }
+
+const foods = ["Bakso ", "Mie Ayam ", "Ketoprak ", "Soto ", "Gado-gado "];
+let test = "";
+for (let i = 0; i < foods.length; i++) {
+  test += foods[i];
+}
+console.log(test);
