@@ -58,7 +58,7 @@ function nameKangKung(n) {
   }
   return txt;
 }
-nameKangKung(10);
+console.log(nameKangKung(10));
 
 // quiz soko mas rangga
 function masukCafe(nama, umur, uang) {
