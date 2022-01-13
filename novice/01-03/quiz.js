@@ -1,14 +1,14 @@
 let name = "herbayu";
 let age = 20;
-let money = 50000;
+let money = 500000;
 let drink = "juice";
 let drinks = "anggur";
 let juice = 50000;
 let anggur = 300000;
 
 // CARA KE DUA
-if (name === null || name === name) {
-  if (name === null) {
+if (name === "" || name === name) {
+  if (name === "") {
     console.log("Anda tidak boleh masuk");
   } else if (name === name) {
     if (age <= 17) {
