@@ -78,9 +78,9 @@ function masukCafe(nama, umur, uang) {
   if (uang <= juice && uang <= anggur) {
     console.log("Uang anda tidak cukup. Anda harus pulang"); /*jika uangnya kurang maka disuruh pulang*/
   } else if (umur <= 17) {
-    console.log("Hi " + nama + " Sisa uang anda " + (uang - juice) + " jika anda membeli juice"); /*menghitung uang sisa dari orang yang umur nya < 17*/
+    console.log("Hi " + nama + " Sisa uang anda " + (uang - juice) + " karena anda membeli juice"); /*menghitung uang sisa dari orang yang umur nya < 17*/
   } else {
-    console.log("Hi " + nama + " Sisa uang anda " + (uang - anggur) + " jika anda membeli anggur"); /*menghitung uang sisa dari orang yang umur nya > 17*/
+    console.log("Hi " + nama + " Sisa uang anda " + (uang - anggur) + " karena anda membeli anggur"); /*menghitung uang sisa dari orang yang umur nya > 17*/
   }
 }
 masukCafe("Dani", 16, 100000);
