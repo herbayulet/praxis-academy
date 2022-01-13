@@ -76,12 +76,12 @@ function masukCafe(nama, umur, uang) {
     }
   }
   if (uang <= juice && uang <= anggur) {
-    console.log("Uang anda tidak cukup. Anda harus pulang");
+    console.log("Uang anda tidak cukup. Anda harus pulang"); /*jika uangnya kurang maka disuruh pulang*/
   } else if (umur <= 17) {
-    console.log("Sisa uang anda " + (uang - juice) + " jika anda membeli juice");
+    console.log("Sisa uang anda " + (uang - juice) + " jika anda membeli juice"); /*menghitung uang sisa dari orang yang umur nya < 17*/
   } else {
-    console.log("Sisa uang anda " + (uang - anggur) + " jika anda membeli anggur");
+    console.log("Sisa uang anda " + (uang - anggur) + " jika anda membeli anggur"); /*menghitung uang sisa dari orang yang umur nya > 17*/
   }
 }
-masukCafe("Dani", 16, 10000);
+masukCafe("Dani", 16, 100000);
 masukCafe("Herbayu", 24, 500000);
