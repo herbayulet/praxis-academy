@@ -65,22 +65,24 @@ console.log(nameKangKung(10));
 function masukCafe(nama, umur, uang) {
   let juice = 50000;
   let anggur = 300000;
+  let drink = "juice";
+  let drunk = "anggur";
   if (nama === "") {
     console.log("Anda tidak boleh masuk"); /*jika nama string kosong maka hasilnya Anda tidak boleh masuk*/
   } else if (nama === nama) {
     console.log("Silahkan masuk " + nama); /*jika nama nya sesuai maka hasilnya Silahkan masuk dan akan melanjutkan ke proses selanjutnya*/
     if (umur <= 17) {
-      console.log(nama + " Hanya boleh memesan juice karena umur kamu " + umur); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
+      console.log(`${nama} hanya boleh memesan ${drink} karena umur kamu ${umur}`); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
     } else {
-      console.log(nama + " Hanya boleh memesan anggur karena umur kamu " + umur); /*jika umur lebih dari 17 maka hanya boleh pesen anggur*/
+      console.log(`${nama} hanya boleh memesan ${drunk} karena umur kamu ${umur}`); /*jika umur lebih dari 17 maka hanya boleh pesen anggur*/
     }
   }
   if (uang <= juice && uang <= anggur) {
     console.log("Uang anda tidak cukup. Anda harus pulang"); /*jika uangnya kurang maka disuruh pulang*/
   } else if (umur <= 17) {
-    console.log("Hi " + nama + " Sisa uang anda " + (uang - juice) + " karena anda membeli juice"); /*menghitung uang sisa dari orang yang umur nya < 17*/
+    console.log("Hi " + nama + " Sisa uang anda " + (uang - juice) + " karena anda membeli " + drink); /*menghitung uang sisa dari orang yang umur nya < 17*/
   } else {
-    console.log("Hi " + nama + " Sisa uang anda " + (uang - anggur) + " karena anda membeli anggur"); /*menghitung uang sisa dari orang yang umur nya > 17*/
+    console.log("Hi " + nama + " Sisa uang anda " + (uang - anggur) + " karena anda membeli " + drunk); /*menghitung uang sisa dari orang yang umur nya > 17*/
   }
 }
 masukCafe("Dani", 16, 10000);
