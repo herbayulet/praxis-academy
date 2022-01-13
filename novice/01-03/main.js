@@ -66,21 +66,22 @@ function masukCafe(nama, umur, uang) {
   let juice = 50000;
   let anggur = 300000;
   if (nama === "") {
-    console.log("Anda tidak boleh masuk");
+    console.log("Anda tidak boleh masuk"); /*jika nama string kosong maka hasilnya Anda tidak boleh masuk*/
   } else if (nama === nama) {
-    console.log("Silahkan masuk");
+    console.log("Silahkan masuk"); /*jika nama nya sesuai maka hasilnya Silahkan masuk dan akan melanjutkan ke proses selanjutnya*/
     if (umur <= 17) {
-      console.log("Hanya boleh memesan juice");
+      console.log("Hanya boleh memesan juice"); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
     } else {
-      console.log("Hanya boleh memesan anggur");
+      console.log("Hanya boleh memesan anggur"); /*jika umur lebih dari 17 maka hanya boleh pesen anggur*/
     }
   }
   if (uang <= juice && uang <= anggur) {
     console.log("Uang anda tidak cukup. Anda harus pulang");
-  } else {
+  } else if (umur <= 17) {
     console.log("Sisa uang anda " + (uang - juice) + " jika anda membeli juice");
+  } else {
     console.log("Sisa uang anda " + (uang - anggur) + " jika anda membeli anggur");
   }
 }
-masukCafe("", 24, 10000);
+masukCafe("Dani", 16, 10000);
 masukCafe("Herbayu", 24, 500000);
