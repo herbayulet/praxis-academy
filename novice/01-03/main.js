@@ -70,9 +70,9 @@ function masukCafe(nama, umur, uang) {
   } else if (nama === nama) {
     console.log("Silahkan masuk " + nama); /*jika nama nya sesuai maka hasilnya Silahkan masuk dan akan melanjutkan ke proses selanjutnya*/
     if (umur <= 17) {
-      console.log(nama + " Hanya boleh memesan juice"); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
+      console.log(nama + " Hanya boleh memesan juice karena umur kamu " + umur); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
     } else {
-      console.log(nama + " Hanya boleh memesan anggur"); /*jika umur lebih dari 17 maka hanya boleh pesen anggur*/
+      console.log(nama + " Hanya boleh memesan juice karena umur kamu " + umur); /*jika umur lebih dari 17 maka hanya boleh pesen anggur*/
     }
   }
   if (uang <= juice && uang <= anggur) {
