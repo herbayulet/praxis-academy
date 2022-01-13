@@ -70,7 +70,7 @@ function masukCafe(nama, umur, uang) {
   if (nama === "") {
     console.log("Anda tidak boleh masuk"); /*jika nama string kosong maka hasilnya Anda tidak boleh masuk*/
   } else if (nama === nama) {
-    console.log("Silahkan masuk " + nama); /*jika nama nya sesuai maka hasilnya Silahkan masuk dan akan melanjutkan ke proses selanjutnya*/
+    console.log(`Silahkan masuk ${nama}`); /*jika nama nya sesuai maka hasilnya Silahkan masuk dan akan melanjutkan ke proses selanjutnya*/
     if (umur <= 17) {
       console.log(`${nama} hanya boleh memesan ${drink} karena umur kamu ${umur}`); /*jika umur kurang dari 17 maka hanya boleh pesen juice*/
     } else {
