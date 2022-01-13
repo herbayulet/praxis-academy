@@ -32,6 +32,7 @@ function namaSaya() {
 }
 console.log(namaSaya());
 
+// function untuk mencetak string dalam array
 function namaMakanans() {
   let a = ["Bakso ", "Mie Ayam ", "Ketoprak ", "Soto ", "Gado-gado "];
   let txt = "";
