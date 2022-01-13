@@ -83,5 +83,5 @@ function masukCafe(nama, umur, uang) {
     console.log("Hi " + nama + " Sisa uang anda " + (uang - anggur) + " jika anda membeli anggur"); /*menghitung uang sisa dari orang yang umur nya > 17*/
   }
 }
-masukCafe("", 16, 100000);
+masukCafe("Dani", 16, 100000);
 masukCafe("Herbayu", 24, 500000);
