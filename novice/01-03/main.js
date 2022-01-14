@@ -13,6 +13,7 @@ function segitiga() {
 }
 console.log(segitiga());
 
+console.log("======================");
 // penjumlahan dengan arguments
 function tambahSemua() {
   let total = 1;
@@ -23,6 +24,7 @@ function tambahSemua() {
 }
 console.log(tambahSemua(3, 4));
 
+console.log("======================");
 //function merge string
 function namaSaya() {
   let namaDepan = "Herbayu";
@@ -32,6 +34,7 @@ function namaSaya() {
 }
 console.log(namaSaya());
 
+console.log("======================");
 // function untuk mencetak array kedalam string
 function namaMakanans() {
   let a = ["Bakso ", "Mie Ayam ", "Ketoprak ", "Soto ", "Gado-gado "];
@@ -43,6 +46,7 @@ function namaMakanans() {
 }
 console.log(namaMakanans());
 
+console.log("======================");
 // kangkung
 function nameKangKung(n) {
   let txt = [];
@@ -61,6 +65,7 @@ function nameKangKung(n) {
 }
 console.log(nameKangKung(10));
 
+console.log("======================");
 // quiz soko mas rangga
 function masukCafe(nama, umur, uang) {
   let juice = 50000;
@@ -87,3 +92,18 @@ function masukCafe(nama, umur, uang) {
 }
 masukCafe("Dani", 16, 10000);
 masukCafe("Herbayu", 24, 500000);
+console.log("======================");
+// function mengurutkan Angkot
+function pengkondisian() {
+  let jmlAngkot = 10;
+  let angkotJalan = 6;
+  for (let nomorAngkot = 1; nomorAngkot <= jmlAngkot; nomorAngkot++) {
+    if (nomorAngkot <= angkotJalan) {
+      console.log("Angkot no " + nomorAngkot + " beroperasi dengan baik");
+    } else {
+      console.log("Angkot no " + nomorAngkot + " sedang tidak beroperasi");
+    }
+  }
+}
+
+pengkondisian();
