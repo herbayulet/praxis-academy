@@ -36,8 +36,8 @@ let jurusan = [
     jurusan: " Mice",
   },
 ];
-jurusan.forEach((i) => {
-  console.log(i.nama.concat(i.jurusan));
+jurusan.forEach((key, value, map) => {
+  console.log(`${key}: ${value}`);
 });
 
 // object
