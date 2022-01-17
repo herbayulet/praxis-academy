@@ -16,10 +16,10 @@ function warriors(durability, strength, hp, power) {
     return this.power++;
   };
   this.max = function (a) {
-    if (this.strong <= a) {
-      return "jangan jaga line sendirian";
-    } else {
+    if (this.strong >= a) {
       return "udah kuat kan";
+    } else {
+      return "jangan jaga line sendirian";
     }
   };
   this.min = function (b) {
@@ -30,11 +30,11 @@ function warriors(durability, strength, hp, power) {
     }
   };
 }
-let warriors1 = new warriors(1, 1, 1, 1);
+let warriors1 = new warriors(10, 10, 10, 10);
 warriors1.strong();
 warriors1.item();
 warriors1.health();
 warriors1.damage();
 
-console.log(warriors1.max(10));
+console.log(warriors1.max(warriors1));
 console.log(warriors1.min(6));

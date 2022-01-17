@@ -14,15 +14,6 @@ b.name = "Herbayu";
 console.log(a);
 console.log(b);
 
-// fungsi entries mengembalikan objek dalam array
-// const jbo = () => {
-//   let pam = Object.create({ mas: "bay", age: 24 });
-//   let map = new Map(Object.entries(pam));
-//   //   console.log(map);
-//   return map;
-// };
-// console.log(jbo());
-
 const object1 = {
   a: "somestring",
   b: 42,
