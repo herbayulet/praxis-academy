@@ -32,6 +32,12 @@ let memanggil = sapa.concat(manggil); /*menggabungkan string*/
 console.log(hi);
 console.log(memanggil);
 
+// challenge from codewars
+function solution(str) {
+  return str.split("").reverse().join("");
+}
+console.log(solution("world"));
+
 // membuat regular expresion
 let re = /ab+c/;
 console.log(re);
