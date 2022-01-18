@@ -197,9 +197,19 @@ let suhu = (x) => {
   } else if (x <= 40) {
     console.log("Suhu Panas");
   } else {
-    console.log("Arepe misuh2 wae cokk");
+    console.log("Auto misuh2 cokk");
   }
 };
 suhu(42);
 
 // Soal 14
+let segitga = (a, b, c) => {
+  if (a == b && b == c) {
+    console.log("Ini adalah segitiga sama sisi");
+  } else if (a == b || a == c || b == c) {
+    console.log("Ini adalah segitiga sama kaki");
+  } else {
+    console.log("ini adalah segitiga siku-siku");
+  }
+};
+segitga(50, 50, 60);
