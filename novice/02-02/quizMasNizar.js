@@ -176,3 +176,28 @@ let akar = (a, b, c) => {
 };
 
 akar(1, 5, 7);
+
+console.log("==================");
+
+// Soal 12
+console.log("Nomor 12 lewat dulu");
+
+console.log("==================");
+
+// Soal 13
+let suhu = (x) => {
+  if (x < 0) {
+    console.log("Beku banget");
+  } else if (x <= 10) {
+    console.log("Sangat dingin");
+  } else if (x <= 20) {
+    console.log("Musim dingin");
+  } else if (x <= 30) {
+    console.log("Suhu Normal");
+  } else if (x <= 40) {
+    console.log("Suhu Panas");
+  } else {
+    console.log("Arepe misuh2 wae cokk");
+  }
+};
+suhu(42);
