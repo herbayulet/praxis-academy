@@ -1,3 +1,4 @@
+console.log("==================");
 // soal 1
 function bilangan() {
   let a = 15;
@@ -10,6 +11,8 @@ function bilangan() {
 }
 bilangan();
 
+console.log("==================");
+
 // Soal 2
 function dibagiDua(x) {
   if (x % 2 === 0) {
@@ -20,6 +23,8 @@ function dibagiDua(x) {
 }
 dibagiDua(15);
 
+console.log("==================");
+
 // Soal 3
 function posNeg(x) {
   if (x >= 0) {
@@ -29,6 +34,8 @@ function posNeg(x) {
   }
 }
 posNeg(15);
+
+console.log("==================");
 
 // Soal 4
 function kabisat(x) {
@@ -44,6 +51,8 @@ function kabisat(x) {
 }
 kabisat(2016);
 
+console.log("==================");
+
 // Soal 5
 function batasUmur(x) {
   if (x < 21) {
@@ -53,6 +62,8 @@ function batasUmur(x) {
   }
 }
 batasUmur(21);
+
+console.log("==================");
 
 // Soal 6
 function bilanganBulat(m, n) {
@@ -69,6 +80,8 @@ function bilanganBulat(m, n) {
 
 bilanganBulat(-5);
 
+console.log("==================");
+
 // Soal 7
 function tinggiBadan(x) {
   if (x >= 165 && x < 195) {
@@ -81,4 +94,61 @@ function tinggiBadan(x) {
 }
 tinggiBadan(135);
 
+console.log("==================");
+
 // Soal 8
+let urutAngka = (num1, num2, num3) => {
+  if (num1 > num2) {
+    if (num1 > num3) {
+      console.log(`${num1} adalah yang paling besar`);
+    } else {
+      console.log(`${num3} adalah yang paling besar`);
+    }
+  } else if (num2 > num3) {
+    console.log(`${num2} adalah yang paling besar`);
+  } else {
+    console.log(`${num3} adalah yang paling besar`);
+  }
+};
+urutAngka(12, 25, 52);
+
+console.log("==================");
+
+// Soal 9
+let titikKordinat = (tik1, tik2) => {
+  if (tik1 > 0 && tik2 > 0) {
+    console.log(`titik koordinat terletak di kuadran pertama, ${tik1} ${tik2}`);
+  } else if (tik1 < 0 && tik2 < 0) {
+    console.log(`titik koordinat terletak di kuadran kedua, ${tik1} ${tik2}`);
+  } else if (tik1 < 0 && tik2 > 0) {
+    console.log(`titik koordinat terletak di kuadran ketiga, ${tik1} ${tik2}`);
+  } else if (tik1 > 0 && tik2 < 0) {
+    console.log(`titik koordinat terletak di kuadran ke empat, ${tik1} ${tik2}`);
+  } else if (tik1 == 0 && tik2 == 0) {
+    console.log(`titik koordinat terletak di kuadran kelima, ${tik1} ${tik2}`);
+  } else {
+    console.log(`titik koordinat terletak di kuadran asal`);
+  }
+};
+titikKordinat(7, 9);
+
+console.log("==================");
+
+// soal 10
+let penerimaanSiswa = (M, F, K) => {
+  if (M >= 65 && F >= 55 && K >= 50) {
+    if (M + F + K >= 190 || M + F >= 140) {
+      console.log("Kandidat memenuhi syarat untuk masuk");
+    } else {
+      console.log("Kandidat tidak memenuhi syarat");
+    }
+  } else {
+    console.log("Kandidat tidak memenuhi syarat");
+  }
+};
+penerimaanSiswa(65, 51, 72);
+penerimaanSiswa(88, 80, 72);
+
+console.log("==================");
+
+// Soal 11
