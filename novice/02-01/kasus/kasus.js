@@ -17,6 +17,7 @@ function warriors(durability, strength, hp, power) {
   };
   this.max = function (a) {
     if (this.strong >= a) {
+      //   console.log(a);
       return "udah kuat kan";
     } else {
       return "jangan jaga line sendirian";
@@ -24,17 +25,19 @@ function warriors(durability, strength, hp, power) {
   };
   this.min = function (b) {
     if (this.health >= b) {
+      //   console.log(b);
       return "maju terus";
     } else {
       return "cepet recall";
     }
   };
 }
-let warriors1 = new warriors(10, 10, 10, 10);
-warriors1.strong();
-warriors1.item();
-warriors1.health();
-warriors1.damage();
+let warriors1 = new warriors(8, 8, 8, 8);
+console.log(warriors1.strong());
+console.log(warriors1.item());
+console.log(warriors1.health());
+console.log(warriors1.damage());
 
+// console.log(warriors1);
 console.log(warriors1.max(warriors1));
-console.log(warriors1.min(6));
+console.log(warriors1.min());
