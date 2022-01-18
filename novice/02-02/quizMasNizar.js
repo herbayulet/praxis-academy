@@ -152,3 +152,28 @@ penerimaanSiswa(88, 80, 72);
 console.log("==================");
 
 // Soal 11
+let akar = (a, b, c) => {
+  var d;
+  var x1;
+  var x2;
+  d = (b * b - 4) * (a * c);
+  console.log(d);
+  if (d == 0) {
+    console.log("kedua akar sama");
+    x1 = -b / (2.0 * a);
+    x2 = x1;
+    console.log(`Akar pertama adalah = ${x1}`);
+    console.log(`Akar kedua adalah = ${x2}`);
+    // } else if (d > 0) {
+    //   console.log("Diantara akar yang asli dan selisih -2");
+    //   x1 = (b + Math(sqrt(d))) / (2 * a);
+    //   x2 = (b - Math(sqrt(d))) / (2 * a);
+    //   console.log(`Akar pertama adalah = ${x1}`);
+    //   console.log(`Akar kedua adalah = ${x2}`);
+    // }
+  } else {
+    console.log("Root bersifat imajiner dan tidak ada solusi");
+  }
+};
+
+akar(1, 5, 7);
