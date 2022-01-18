@@ -224,3 +224,30 @@ console.log(sudut(40, 55, 65));
 
 console.log("==================");
 // Soal 16
+let karakter = (String, Number) => {
+  if (String === "Herbayu") {
+    console.log("Ini adalah karakter String");
+  } else if (Number === 8) {
+    console.log("Ini adalah karakter Integer/Number");
+  } else {
+    console.log("Ini adalah karakter khusus");
+  }
+};
+karakter("@");
+
+console.log("==================");
+// Soal 17
+let alphabet = (str) => {
+  if (str[0] === "a" || str[0] === "i" || str[0] === "u" || str[0] === "e" || str[0] === "o" || str[0] === "A" || str[0] === "I" || str[0] === "E" || str[0] === "U" || str[0] === "O") {
+    console.log("Kalimat ini diawali Huruf Vowel");
+  } else if (str[0] === "a" && str[0] === "z") {
+    console.log("Kalimat ini diawali Huruf Konsonan");
+  } else {
+    console.log("Bukan huruf Alphabet");
+  }
+};
+alphabet("Kambing".split(""));
+alphabet("Ayam".split(""));
+
+console.log("==================");
+// Soal 18
