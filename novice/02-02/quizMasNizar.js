@@ -153,9 +153,9 @@ console.log("==================");
 
 // Soal 11
 let akar = (a, b, c) => {
-  var d;
-  var x1;
-  var x2;
+  let d;
+  let x1;
+  let x2;
   d = (b * b - 4) * (a * c);
   console.log(d);
   if (d == 0) {
@@ -201,3 +201,5 @@ let suhu = (x) => {
   }
 };
 suhu(42);
+
+// Soal 14
