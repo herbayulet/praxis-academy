@@ -174,7 +174,6 @@ let akar = (a, b, c) => {
     console.log("Root bersifat imajiner dan tidak ada solusi");
   }
 };
-
 akar(1, 5, 7);
 
 console.log("==================");
@@ -202,6 +201,7 @@ let suhu = (x) => {
 };
 suhu(42);
 
+console.log("==================");
 // Soal 14
 let segitga = (a, b, c) => {
   if (a == b && b == c) {
@@ -213,3 +213,14 @@ let segitga = (a, b, c) => {
   }
 };
 segitga(50, 50, 60);
+
+console.log("==================");
+// Soal 15
+let sudut = (a, b, c) => {
+  let total = a + b + c;
+  return total === 180 ? "ini fix segitiga" : "bukan segitiga";
+};
+console.log(sudut(40, 55, 65));
+
+console.log("==================");
+// Soal 16
