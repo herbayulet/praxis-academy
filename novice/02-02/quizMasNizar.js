@@ -477,7 +477,7 @@ jumlahHari(7);
 console.log("==================");
 // Soal 25
 let area;
-let luas = (r, l, w, a, t, x) => {
+let luas = (x, r, l, w, a, t) => {
   switch (x) {
     case 1:
       area = 3.14 * r * r;
@@ -496,7 +496,7 @@ let luas = (r, l, w, a, t, x) => {
   }
 };
 
-luas(1, 5, 3);
+luas(1, 5, 5, 5, 1, 5);
 
 console.log("==================");
 // Soal 26
@@ -506,13 +506,13 @@ let aritmatika = (a, b, c) => {
       console.log(`total untuk soal pertambahan: ${a + b}`);
       break;
     case 2:
-      console.log(`total untuk soal pertambahan: ${a - b}`);
+      console.log(`total untuk soal pengurangan: ${a - b}`);
       break;
     case 3:
-      console.log(`total untuk soal pertambahan: ${a * b}`);
+      console.log(`total untuk soal perkalian: ${a * b}`);
       break;
     case 4:
-      console.log(`total untuk soal pertambahan: ${a / b}`);
+      console.log(`total untuk soal pembagian: ${a / b}`);
       break;
 
     default:
