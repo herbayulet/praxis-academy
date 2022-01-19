@@ -179,7 +179,29 @@ akar(1, 5, 7);
 console.log("==================");
 
 // Soal 12
-console.log("Nomor 12 lewat dulu");
+let siswa = (f, c, k) => {
+  let id = 784;
+  let nama = "James";
+  let total = f + c + k;
+  let avg = total / 3;
+  console.log(`NRP Siswa: ${id}`);
+  console.log(`Nama Siswa: ${nama}`);
+  console.log(`Masukan Nilai Fisika : ${f}`);
+  console.log(`Masukan Nilai Kimia : ${c}`);
+  console.log(`Masukan Nilai Komputer : ${k}`);
+  console.log(`Nilai Total: ${total}`);
+  console.log(`Persentase: ${avg}`);
+  if (avg >= 60) {
+    console.log("Pembagian: Pertama");
+  } else if (avg < 60 && avg >= 48) {
+    console.log("Pembagian: Kedua");
+  } else if (avg < 48 && avg >= 36) {
+    console.log("Pembagian: Pass");
+  } else {
+    console.log("Pembagian: Gagal");
+  }
+};
+siswa(70, 80, 90);
 
 console.log("==================");
 
@@ -240,8 +262,6 @@ console.log("==================");
 let alphabet = (str) => {
   if (str[0] === "a" || str[0] === "i" || str[0] === "u" || str[0] === "e" || str[0] === "o" || str[0] === "A" || str[0] === "I" || str[0] === "E" || str[0] === "U" || str[0] === "O") {
     console.log("Kalimat ini diawali Huruf Vowel");
-  } else if (str[0] === "a" && str[0] === "z") {
-    console.log("Kalimat ini diawali Huruf Konsonan");
   } else {
     console.log("Bukan huruf Alphabet");
   }
@@ -251,3 +271,254 @@ alphabet("Ayam".split(""));
 
 console.log("==================");
 // Soal 18
+
+let pnl = (p, e, t) => {
+  if (p > e) {
+    t = p - e;
+    console.log(`Defisit yang harus ditanggung adalah ${t}`);
+  } else if (e > p) {
+    t = e - p;
+    console.log(`Anda memiliki sisa keuntungan ${t}`);
+  } else {
+    console.log("Anda tidak dalam kondisi profit atau defisit");
+  }
+};
+pnl(500, 700);
+
+console.log("==================");
+// Soal 19
+let customer = (id, name, exp) => {
+  let cost;
+  let costs;
+  let total;
+  if (exp < 200) {
+    cost = 1.2;
+  } else if (exp >= 200 && exp < 400) {
+    cost = 1.5;
+  } else if (exp >= 400 && exp < 600) {
+    cost = 1.8;
+  } else {
+    cost = 2.0;
+  }
+  if (exp > 300) {
+    costs = exp * cost * 0.15;
+    total = exp * cost + costs;
+  } else {
+    total = 100;
+  }
+  console.log(`ID Pelanggan: ${id}`);
+  console.log(`Nama Pelanggan: ${name}`);
+  console.log(`Yang di bebankan: ${exp}`);
+  console.log(`Jumlah cost nya adalah: @${cost} per unit`);
+  console.log(`${exp * cost} dengan tambahan ${costs}`);
+  console.log(`Total yang dibebankan adalah: ${total}`);
+};
+customer(1001, "James", 800);
+
+console.log("==================");
+// Soal 20
+let nilai = (x) => {
+  switch (x) {
+    case "E":
+      console.log("Bagus Sekali");
+      break;
+    case "V":
+      console.log("Baik Sekali");
+      break;
+    case "G":
+      console.log("Bagus");
+      break;
+    case "F":
+      console.log("Gagal");
+      break;
+    default:
+      console.log("Rata - Rata");
+      break;
+  }
+};
+nilai("A");
+
+console.log("==================");
+// Soal 21
+let hari = (x) => {
+  switch (x) {
+    case 1:
+      console.log("Senin");
+      break;
+    case 2:
+      console.log("Selasa");
+      break;
+    case 3:
+      console.log("Rabu");
+      break;
+    case 4:
+      console.log("Kamis");
+      break;
+    case 5:
+      console.log("Jum'at");
+      break;
+    case 6:
+      console.log("Sabtu");
+      break;
+    case 7:
+      console.log("Minggu");
+      break;
+    default:
+      break;
+  }
+};
+hari(4);
+
+console.log("==================");
+// Soal 22
+
+let namaAngka = (x) => {
+  switch (x) {
+    case 1:
+      console.log("Satu");
+      break;
+    case 2:
+      console.log("Dua");
+      break;
+    case 3:
+      console.log("Tiga");
+      break;
+    case 4:
+      console.log("Empat");
+      break;
+    case 5:
+      console.log("Lima");
+      break;
+    case 1:
+      console.log("Enam");
+      break;
+    case 1:
+      console.log("Tujuh");
+      break;
+    default:
+      break;
+  }
+};
+namaAngka(4);
+
+console.log("==================");
+// Soal 23
+
+let bulan = (x) => {
+  switch (x) {
+    case 1:
+      console.log("Januari");
+      break;
+    case 2:
+      console.log("Februari");
+      break;
+    case 3:
+      console.log("Maret");
+      break;
+    case 4:
+      console.log("April");
+      break;
+    case 5:
+      console.log("Mei");
+      break;
+    case 6:
+      console.log("Juni");
+      break;
+    case 7:
+      console.log("Juli");
+      break;
+    case 8:
+      console.log("Agustus");
+      break;
+    case 9:
+      console.log("September");
+      break;
+    case 10:
+      console.log("Oktober");
+      break;
+    case 11:
+      console.log("November");
+      break;
+    case 12:
+      console.log("Desember");
+      break;
+    default:
+      break;
+  }
+};
+bulan(4);
+
+console.log("==================");
+// Soal 24
+let jumlahHari = (x) => {
+  switch (x) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      console.log("Memiliki 31 hari");
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      console.log("Memiliki 30 hari");
+      break;
+    default:
+      console.log("Memiliki 28/29 hari");
+      break;
+  }
+};
+jumlahHari(7);
+
+console.log("==================");
+// Soal 25
+let area;
+let luas = (r, l, w, a, t, x) => {
+  switch (x) {
+    case 1:
+      area = 3.14 * r * r;
+      console.log(`luas area: ${area}`);
+      break;
+    case 2:
+      area = l * w;
+      console.log(`luas area: ${area}`);
+      break;
+    case 3:
+      area = 0.5 * a * t;
+      console.log(`luas area: ${area}`);
+      break;
+    default:
+      break;
+  }
+};
+
+luas(1, 5, 3);
+
+console.log("==================");
+// Soal 26
+let aritmatika = (a, b, c) => {
+  switch (c) {
+    case 1:
+      console.log(`total untuk soal pertambahan: ${a + b}`);
+      break;
+    case 2:
+      console.log(`total untuk soal pertambahan: ${a - b}`);
+      break;
+    case 3:
+      console.log(`total untuk soal pertambahan: ${a * b}`);
+      break;
+    case 4:
+      console.log(`total untuk soal pertambahan: ${a / b}`);
+      break;
+
+    default:
+      console.log("Salah memasukan input");
+      break;
+  }
+};
+
+aritmatika(10, 2, 3);
