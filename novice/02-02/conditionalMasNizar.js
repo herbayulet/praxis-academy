@@ -496,7 +496,7 @@ let luas = (x, r, l, w, a, t) => {
   }
 };
 
-luas(1, 5, 5, 5, 1, 5);
+luas(1, 5);
 
 console.log("==================");
 // Soal 26
