@@ -61,3 +61,16 @@ perkalian(10, 15);
 
 console.log("==================");
 // Soal 7
+
+let perkalianGanda = (n) => {
+  for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (j <= n - 1) {
+        console.log(`${i} x ${j} = ${i * j}`);
+      } else {
+        console.log(`${i} x ${j} = ${i * j}`);
+      }
+    }
+  }
+};
+perkalianGanda(8);
