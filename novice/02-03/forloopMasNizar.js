@@ -232,10 +232,10 @@ let deretArmonik = (n) => {
   for (let i = 1; i <= n; i++) {
     if (i < n) {
       console.log(`1/${i}`);
-      s += 1 / s[i];
+      s += 1 / i;
     } else if (i == n) {
       console.log(`1/${i}`);
-      s += 1 / s[i];
+      s += 1 / i;
     }
     // return s[i];
   }
