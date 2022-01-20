@@ -80,14 +80,12 @@ console.log("==================");
 
 let bilanganGanjil = (n) => {
   let sum = 0;
+  console.log(`Masukan jumlah : ${n}`);
   for (let i = 1; i <= n; i++) {
-    sum += i;
-    if (i % 2 == 0) {
-      console.log("bilangan genap");
-    } else {
-      console.log(i);
-    }
+    console.log(2 * i - 1);
+    sum += 2 * i - 1;
   }
+  console.log(`Jumlah bilangan asli ganjil s/d ${n} : ${sum}`);
 };
 bilanganGanjil(10);
 
@@ -139,14 +137,34 @@ console.log(segitigaAngka(10));
 console.log("==================");
 // Soal 12
 
-function segitigaPlus(panjang) {
-  let hasil = 1;
-  for (let i = 1; i <= panjang; i++) {
-    for (let j = 1; j <= i; j++) {
-      console.log(hasil++);
+let baris = (rows) => {
+  let k = 1;
+  console.log(`Masukan jumlah baris: ${rows}`);
+  for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= i; j++) console.log(k++);
+    {
+      console.log("\n");
     }
-    console.log("\n");
   }
-  // return hasil;
-}
-segitigaPlus(4);
+};
+baris(4);
+
+// console.log("==================");
+// // Soal 13
+
+// function piramid4(rows) {
+//   let t = 1;
+//   console.log(`Masukan jumlah baris: ${rows}`);
+//   let spc = rows + 4 - 1;
+//   for (let i = 1; i <= rows; i++) {
+//     for (let k = spc; k > 1; k--) {
+//       console.log(" ");
+//     }
+//     for (let j = 1; j <= i; j++) {
+//       console.log(t++);
+//       console.log("\n");
+//       spc--;
+//     }
+//   }
+// }
+// piramid4(4);
