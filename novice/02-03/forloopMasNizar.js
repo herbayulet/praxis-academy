@@ -239,6 +239,26 @@ let deretArmonik = (n) => {
     }
     // return s[i];
   }
-  console.log(`Jumlah deret angka ${n} : ${s++}`);
+  console.log(`Jumlah deret angka ${n} : ${s}`);
 };
 deretArmonik(5);
+
+console.log("\n");
+console.log("Soal Nomor 20");
+// soal 20
+
+console.log("\n");
+console.log("Soal Nomor 21");
+// soal 21
+
+let totalDeret = (n, t) => {
+  let sum = 0;
+  console.log(`Masukan nomor : ${n}`);
+  for (let i = 1; i <= n; i++) {
+    sum += t;
+    console.log(t);
+    t = t * 10 + 9;
+  }
+  console.log(`Total jumlah deret: ${sum}`);
+};
+totalDeret(5, 9);
