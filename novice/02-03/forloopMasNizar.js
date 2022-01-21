@@ -444,8 +444,7 @@ let solusi = (num) => {
   }
   console.log(r);
   console.log(sum);
-  console.log("jawabannya masih salah");
-  sum === temp ? console.log(`${temp} adalah bilangan armstrong`) : console.log(`${temp} adalah bukan bilangan armstrong`);
+  sum === temp ? console.log(`${temp} adalah bilangan armstrong`) : console.log(`${temp} adalah bukan bilangan armstrong & jawabannya masih salah`);
 };
 solusi(153);
 
@@ -469,8 +468,7 @@ let angkaAmstrong = (s, l) => {
       sum += Math.pow(r, 3);
     }
   }
-  sum == num ? console.log(`Nomor Armstrong dalam rentang yang diberikan adalah: ${num}`) : console.log("Bukan nomor amstrong");
-  console.log("Jawabannya masih salah");
+  sum == num ? console.log(`Nomor Armstrong dalam rentang yang diberikan adalah: ${num}`) : console.log("Bukan nomor amstrong dan jawabannya masih salah");
 };
 
 angkaAmstrong(1, 1000);
