@@ -1,13 +1,13 @@
 let tangga = (x) => {
-  let s = "";
-  for (let a = 0; a <= 5; a++) {
-    for (let b = 0; b <= a; b++) {
-      s += ">";
+  let s = 0;
+  for (let a = 1; a <= 5; a++) {
+    for (let b = 1; b <= a; b++) {
+      s += a;
     }
     s += "\n";
   }
   for (let i = 5; i >= x; i--) {
-    for (let j = 0; j <= i; j++) {
+    for (let j = 1; j <= i; j++) {
       s += ">";
     }
     s += "\n";

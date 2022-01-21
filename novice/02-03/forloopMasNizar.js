@@ -262,3 +262,215 @@ let totalDeret = (n, t) => {
   console.log(`Total jumlah deret: ${sum}`);
 };
 totalDeret(5, 9);
+
+console.log("\n");
+console.log("Soal Nomor 22");
+// soal 22
+
+console.log("\n");
+console.log("Soal Nomor 23");
+// soal 23
+
+let menghitungDeret = (n, x) => {
+  let sum = 1;
+  let no_row = 1;
+  console.log(`Masukan nilai: ${x}`);
+  console.log(`Masukan jumlah suku: ${n}`);
+  for (let i = 1; i < n; i++) {
+    no_row *= x / i;
+    sum += no_row;
+  }
+  console.log(`Jumlahnya adalah : ${sum}`);
+};
+menghitungDeret(5, 3);
+
+console.log("\n");
+console.log("Soal Nomor 24");
+// soal 24
+
+let tambahDeret = (n, x) => {
+  let sum = x;
+  let m = -1;
+  let mm;
+  let nn;
+  let ctr;
+  console.log(`Masukan nilai : ${x}`);
+  console.log(`Masukan jumlah suku : ${n}`);
+  for (let i = 1; i < n; i++) {
+    ctr = 2 * i + 1;
+    mm = Math.pow(x, ctr);
+    nn = mm * m;
+    console.log(`Nilai dari ${nn}`);
+    sum += nn;
+    m *= -1;
+  }
+  console.log(`Jumlah nya adalah = ${sum}`);
+};
+tambahDeret(5, 2);
+
+console.log("\n");
+console.log("Soal Nomor 25");
+// soal 25
+
+let sukuBilangan = (n) => {
+  let sum = 0;
+  console.log(`Masukan jumlah suku : ${n}`);
+  for (let i = 1; i <= n; i++) {
+    console.log(`Kuadrat asli sampai dengan ${n} suku adalah : ${i * i} `);
+    sum += i * i;
+  }
+  console.log(`Jumlah bilangan kuadrat sampai dengan ${n} suku = ${sum} `);
+};
+sukuBilangan(5);
+
+console.log("\n");
+console.log("Soal Nomor 26");
+// soal 26
+
+let juder = (n, t) => {
+  let sum = 0;
+  console.log(`Masukan jumlah suku : ${n}`);
+  for (let i = 1; i <= n; i++) {
+    console.log(t);
+    if (i < n) {
+      console.log("+ ");
+    }
+    sum += t;
+    t = t * 10 + 1;
+  }
+  console.log(`jumlahnya adalah : ${sum}`);
+};
+juder(5, 1);
+
+console.log("\n");
+console.log("Soal Nomor 27");
+// soal 27
+
+let bilanganPerfect = (x, sum) => {
+  console.log(`Masukan nomor: ${x}`);
+  for (let i = 1; i < x; i++) {
+    if (x % i == 0) {
+      sum += i;
+      console.log(`Pembagi positif: ${i}`);
+    }
+  }
+  console.log(`Jumlah pembaginya adalah: ${sum}`);
+  if (sum == x) {
+    console.log(`Jadi, jumlahnya sempurna`);
+  } else {
+    console.log(`Jumlahnya tidak sempurna`);
+  }
+};
+bilanganPerfect(56, 0);
+
+console.log("\n");
+console.log("Soal Mas Nizar");
+// soal Mas Nizar
+
+const data = [
+  {
+    id: "102244",
+    name: "America",
+    location: {
+      latitude: 1.4564,
+      longitude: 0.45787,
+    },
+  },
+  {
+    id: "103344",
+    name: "Netherland",
+    location: {
+      latitude: 1.6739,
+      longitude: 0.99987,
+    },
+  },
+  {
+    id: "105544",
+    name: "France",
+    location: {
+      latitude: 1.8839,
+      longitude: 0.23487,
+    },
+  },
+];
+
+// data.forEach((i) => {
+//   console.log(i.name);
+//   console.log(i.location.latitude);
+// });
+for (let i = 0; i < data.length; i++) {
+  console.log(data[i].name);
+}
+
+console.log("\n");
+console.log("Soal Nomor 28");
+// soal 28
+
+let bilanganSempurna = () => {
+  let mn = 1;
+  let mx = 56;
+  let sum;
+  let n;
+  console.log(`Masukan rentang atau nomor awal: ${mn}`);
+  console.log(`Masukan rentang nomor akhir: ${mx}`);
+  for (n = mn; n <= mx; n++) {
+    let i = 1;
+    sum = 0;
+    while (i < n) {
+      if (n % i == 0) sum += i;
+      i++;
+    }
+    if (sum == n) {
+      console.log(`Angka sempurna dalam kisaran yang diberikan: ${n}`);
+    } else {
+      // console.log("\n");
+    }
+  }
+};
+bilanganSempurna();
+
+console.log("\n");
+console.log("Soal Nomor 29");
+// soal 29
+
+let solusi = (num) => {
+  let sum = 0;
+  let temp;
+  let r;
+  console.log(`Masukan nomor: ${num}`);
+  for (temp = num; num != 0; num /= 10) {
+    r = num % 10;
+    sum += Math.pow(r, 3);
+  }
+  console.log(r);
+  console.log(sum);
+  console.log("jawabannya masih salah");
+  sum === temp ? console.log(`${temp} adalah bilangan armstrong`) : console.log(`${temp} adalah bukan bilangan armstrong`);
+};
+solusi(153);
+
+console.log("\n");
+console.log("Soal Nomor 30");
+// soal 30
+
+let angkaAmstrong = (s, l) => {
+  let r;
+  let sum;
+  let temp;
+  let num;
+  console.log(`Masukan nomor awal: ${s}`);
+  console.log(`Masukan nomor awal: ${l}`);
+  for (num = s; num <= l; num++) {
+    temp = num;
+    sum = 0;
+    while (temp != 0) {
+      r = temp % 10;
+      temp /= 10;
+      sum += Math.pow(r, 3);
+    }
+  }
+  sum == num ? console.log(`Nomor Armstrong dalam rentang yang diberikan adalah: ${num}`) : console.log("Bukan nomor amstrong");
+  console.log("Jawabannya masih salah");
+};
+
+angkaAmstrong(1, 1000);
