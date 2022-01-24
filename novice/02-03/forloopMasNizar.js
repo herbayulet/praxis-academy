@@ -625,3 +625,24 @@ sumInteger();
 console.log("\n");
 console.log("Soal Nomor 40");
 // soal 40
+
+let piramidAngka = (x) => {
+  let alph = "A";
+  let blk;
+  let ctr = 1;
+  console.log(`Masukan nomor dari abjad (kurang dari 26) dalam piramid: ${x}`);
+  for (let i = 1; i <= x; i++) {
+    for (blk = 1; blk <= x - 1; blk++) console.log(" ");
+    for (let j = 0; j <= ctr / 2; j++) {
+      console.log(alph++);
+    }
+    alph -= 2;
+    for (j = 0; j <= ctr / 2; j++) {
+      console.log(alph--);
+    }
+    ctr += 2;
+    alph = "A";
+    console.log("\n");
+  }
+};
+piramidAngka(6);
