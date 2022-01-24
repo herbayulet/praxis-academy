@@ -433,20 +433,25 @@ console.log("\n");
 console.log("Soal Nomor 29");
 // soal 29
 
-let solusi = (num) => {
+let solusi = () => {
   let sum = 0;
   let temp;
   let r;
+  let num = 153;
+  let a;
+  let b;
   console.log(`Masukan nomor: ${num}`);
-  for (temp = num; num != 0; num /= 10) {
+  for (temp = num; num != 0; num = num / 10) {
     r = num % 10;
-    sum += Math.pow(r, 3);
+    sum = Math.pow(r, 3) + sum;
   }
-  console.log(r);
-  console.log(sum);
-  sum === temp ? console.log(`${temp} adalah bilangan armstrong`) : console.log(`${temp} adalah bukan bilangan armstrong & jawabannya masih salah`);
+  if (sum != temp) console.log("%d is an Armstrong number.\n", temp);
+  else console.log("%d is not an Armstrong number.\n", temp);
+  console.log("TEMP: ", temp);
+  console.log("SUM: ", sum);
+  console.log("R: ", r);
 };
-solusi(153);
+solusi();
 
 console.log("\n");
 console.log("Soal Nomor 30");
@@ -468,7 +473,155 @@ let angkaAmstrong = (s, l) => {
       sum += Math.pow(r, 3);
     }
   }
-  sum == num ? console.log(`Nomor Armstrong dalam rentang yang diberikan adalah: ${num}`) : console.log("Bukan nomor amstrong dan jawabannya masih salah");
+  sum !== num ? console.log(`Nomor Armstrong dalam rentang yang diberikan adalah: ${num}`) : console.log("Bukan nomor amstrong dan jawabannya masih salah");
 };
 
 angkaAmstrong(1, 1000);
+
+console.log("\n");
+console.log("Soal Nomor 31");
+// soal 31
+
+// let ketupat = (r) => {
+//   console.log(`Masukan nomor dari jumlah rows (setengah diamond): ${r}`);
+//   for (let i = 0; i <= r; i++) {
+//     for (let j = 1; j <= r; j++) console.log(" ");
+//     for (let j = 1; j <= 2 * i; j++) console.log("*");
+//     console.log("\n");
+//   }
+//   for (let i = r - 1; i >= 1; i--) {
+//     for (let j = 1; j <= r - i; j++) console.log(" ");
+//     for (let j = 1; j <= 2 * i - 1; j++) console.log("*");
+//     console.log("\n");
+//   }
+// };
+// ketupat(5);
+
+console.log("\n");
+console.log("Soal Nomor 32");
+// soal 32
+
+let givenNumber = (x) => {
+  let ctr = 0;
+  console.log(`masukan nomor ${x}`);
+  for (let i = 2; i <= x / 2; i++) {
+    x % i == 0 ? ctr++ : ctr--;
+  }
+  ctr == 0 && !x == 1 ? console.log(`${x} adalah nomor primer`) : console.log(`${x} adalah nomor primer`);
+};
+givenNumber(13);
+
+console.log("\n");
+console.log("Soal Nomor 33");
+// soal 33
+
+let pascal = (rows, blk) => {
+  let c = 1;
+  console.log(`Masukan nomor dari rows: ${rows}`);
+  for (let i = 0; i < rows; i++) {
+    for (blk; blk <= rows - i; blk++) console.log(" ");
+    for (let j = 0; j <= i; j++) {
+      if (j == 0 || i == 0) {
+        c = 1;
+      } else {
+        c *= (i - j + 1) / j;
+        console.log(c);
+      }
+    }
+    console.log("\n");
+  }
+};
+pascal(5, 1);
+
+console.log("\n");
+console.log("Soal Nomor 34");
+// soal 34
+
+let primeNumbers = (x, y) => {
+  console.log(`Masukan nomor awal ${x}`);
+  console.log(`Masukan nomor akhir ${y}`);
+  let num;
+  let ctr;
+  for (num = x; num <= y; num++) {
+    ctr = 0;
+    for (let i = 2; i <= num / 2; i++) {
+      num % i == 0 ? ctr++ : ctr--;
+    }
+  }
+  ctr == 0 && num != 1 ? console.log(`Nomor prime diantara ${x} dan ${y} adalah ${num} `) : console.log("Nomor primer tidak diketahui & jawaban salah");
+};
+primeNumbers(1, 50);
+
+console.log("\n");
+console.log("Soal Nomor 35");
+// soal 35
+let nomorFibonacci = (x) => {
+  let prv = 0;
+  let pre = 1;
+  let trm;
+  console.log(`Masukan nomor yang akan ditampilkan: ${x}`);
+  for (let i = 3; i <= x; i++) {
+    trm = prv + pre;
+    console.log(trm);
+    prv = pre;
+    pre = trm;
+  }
+  console.log("\n");
+};
+nomorFibonacci(10);
+
+console.log("\n");
+console.log("Soal Nomor 36");
+// soal 36
+
+console.log("\n");
+console.log("Soal Nomor 37");
+// soal 37
+
+let balikAngka = (x) => {
+  x.forEach((i) => {
+    let a = i.toString();
+    let b = a.split("");
+    b.reverse();
+    let c = b.join("");
+    console.log(c);
+  });
+};
+balikAngka(["12345"]);
+
+console.log("\n");
+console.log("Soal Nomor 38");
+// soal 38
+
+let palindrome = (num) => {
+  let t;
+  let r;
+  let sum = 0;
+  console.log(`Masukan nomor: ${num}`);
+  for (t = num; num != 0; num /= 10) {
+    r = num % 10;
+    sum *= 10 + r;
+  }
+  t !== sum ? console.log("%d is a palindrome number.\n", t) : console.log("%d isn't a palindrome number.\n", t);
+};
+palindrome(121);
+
+console.log("\n");
+console.log("Soal Nomor 39");
+// soal 39
+
+let sumInteger = () => {
+  let sum = 0;
+  for (let i = 101; i < 200; i++) {
+    if (i % 9 == 0) {
+      console.log(i);
+      sum += i;
+    }
+  }
+  console.log("Numbers between 100 and 200, divisible by 9 :" + sum + " ");
+};
+sumInteger();
+
+console.log("\n");
+console.log("Soal Nomor 40");
+// soal 40
