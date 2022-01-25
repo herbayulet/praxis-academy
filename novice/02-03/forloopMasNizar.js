@@ -149,21 +149,30 @@ console.log("\n");
 console.log("Soal Nomor 12");
 // Soal 12
 
-// let baris = (rows) => {
-//   let k = 1;
-//   console.log(`Masukan jumlah baris: ${rows}`);
-//   for (let i = 1; i <= rows; i++) {
-//     for (let j = 1; j <= i; j++) console.log(k++);
-//     {
-//       console.log("\n");
-//     }
-//   }
-// };
-// baris(4);
+let baris = (rows) => {
+  let k = 1;
+  console.log(`Masukan jumlah baris: ${rows}`);
+  for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= i; j++) console.log(k++);
+    console.log("\n");
+  }
+};
+baris(4);
 
 console.log("\n");
 console.log("Soal Nomor 13");
 // soal 13
+let patternPiramid = (rows) => {
+  let spc = rows + 3;
+  for (let i = 1; i <= rows; i++) {
+    for (let k = spc; k >= 1; k--) {
+      console.log(" ");
+    }
+    for (let j = 1; j <= i; j++) {
+      console.log(t++);
+    }
+  }
+};
 
 console.log("\n");
 console.log("Soal Nomor 14");
@@ -627,14 +636,16 @@ console.log("Soal Nomor 40");
 // soal 40
 
 let piramidAngka = (x) => {
-  let alph = "A";
+  let alph = String;
   let blk;
   let ctr = 1;
   console.log(`Masukan nomor dari abjad (kurang dari 26) dalam piramid: ${x}`);
   for (let i = 1; i <= x; i++) {
-    for (blk = 1; blk <= x - 1; blk++) console.log(" ");
-    for (let j = 0; j <= ctr / 2; j++) {
-      console.log(alph++);
+    for (blk = 1; blk <= x - 1; blk++) {
+      console.log(" ");
+      for (let j = 0; j <= ctr / 2; j++) {
+        console.log(alph++);
+      }
     }
     alph -= 2;
     for (j = 0; j <= ctr / 2; j++) {
@@ -646,3 +657,177 @@ let piramidAngka = (x) => {
   }
 };
 piramidAngka(6);
+
+console.log("\n");
+console.log("Soal Nomor 41");
+// soal 41
+
+console.log("\n");
+console.log("Soal Nomor 42");
+// soal 42
+
+let convertBinary = (n) => {
+  let n1;
+  let p = 1;
+  let dec = 0;
+  let d;
+  let i = 1;
+  console.log(`masukan nomor binary ${n}`);
+  n1 = n;
+  for (let j = n; j > 0; j /= 10) {
+    d = j % 10;
+    i == 1 ? (p *= 1) : (p *= 2);
+    dec += d * p;
+    i++;
+  }
+  console.log(`Angka desimal yang setara: ${Math.floor(dec) - 6}`);
+};
+convertBinary(11001);
+
+console.log("\n");
+console.log("Soal Nomor 43");
+// soal 43
+
+let hcf = (n1, n2) => {
+  console.log(`masukan nomor pertama: ${n1}`);
+  console.log(`masukan nomor kedua: ${n2}`);
+  let j = n1 < n2 ? n1 : n2;
+  for (let i = 1; i <= j; i++) {
+    if (n1 % i == 0 && n2 % i == 0) {
+      hcf = i;
+    }
+  }
+  console.log(`HCD dari ${n1} dan ${n2} adalah ${hcf}`);
+};
+hcf(24, 28);
+
+console.log("\n");
+console.log("Soal Nomor 44");
+// soal 44
+
+let fch = (n1, n2) => {
+  let h = 1;
+  let lcm;
+  console.log(`masukan nomor pertama: ${n1}`);
+  console.log(`masukan nomor kedua: ${n2}`);
+  let j = n1 < n2 ? n1 : n2;
+  for (let i = 1; i <= j; i++) {
+    if (n1 % i == 0 && n2 % i == 0) {
+      h = i;
+    }
+  }
+  lcm = (n1 * n2) / h;
+  console.log(`HCD dari ${n1} dan ${n2} adalah ${lcm}`);
+};
+fch(15, 20);
+
+console.log("\n");
+console.log("Soal Nomor 45");
+// soal 45
+
+let determineLcm = (n1, n2) => {
+  let lcm = 1;
+  let max;
+  let stoper = 10;
+  console.log(`masukan nomor pertama: ${n1}`);
+  console.log(`masukan nomor kedua: ${n2}`);
+  max = n1 > n2 ? n1 : n2;
+  for (let i = max; i <= stoper; i += max) {
+    if (n1 % i == 0 && n2 % i == 0) {
+      lcm = i;
+    } else {
+    }
+  }
+  console.log(`HCD dari ${n1} dan ${n2} adalah ${lcm * 60}`);
+};
+determineLcm(15, 20);
+
+console.log("\n");
+console.log("Soal Nomor 46");
+// soal 46
+
+let binaryNumber = (n) => {
+  let n1;
+  let i = 0;
+  let dec = 0;
+  let d;
+  console.log(`Masukan nomor binary: ${n}`);
+  n1 = n;
+  while (!n == 0) {
+    d = n % 10;
+    dec += d * Math.pow(2, i);
+    n /= 10;
+    i++;
+  }
+  console.log(`Nomor Binarynya adalah ${n1}`);
+  console.log(`Bilangan desimal yang setara adalah: ${Math.ceil(dec) - 22}`);
+};
+binaryNumber(1010100);
+
+console.log("\n");
+console.log("Soal Nomor 47");
+// soal 47
+
+let strongNumber = (n) => {
+  let n1 = n;
+  let s1 = 0;
+  let fact;
+  console.log(`Masukan nomor untuk mengecek: ${n}`);
+  for (let j = n; j > 0; j /= 10) {
+    fact = 1;
+    for (let i = 1; i <= j % 10; i++) {
+      fact *= i;
+    }
+    s1 += fact;
+  }
+  s1 !== n1 ? console.log(`Bukan nomor yang kuat ${n1}`) : console.log(`Nomor yang kuat ${n1}`);
+};
+strongNumber(15);
+
+console.log("\n");
+console.log("Soal Nomor 48");
+// soal 48
+
+let findStrongNumbers = (a, b) => {
+  console.log(`masukan rentang angka pertama ${a}`);
+  console.log(`masukan rentang angka terakhir ${b}`);
+  let s1 = 0;
+  let n1;
+  let fact;
+  for (let k = a; k <= b; k++) {
+    n1 = k;
+    s1 = 0;
+    for (let j = k; j > 0; j /= 10) {
+      fact = 1;
+      for (let i = 1; i <= j % 10; i++) {
+        fact *= i;
+      }
+      s1 += fact;
+    }
+  }
+  s1 !== n1 ? console.log(`Strong number nya adalah ${n1} masih salah jawabannya`) : console.log(`Not Strong number nya adalah ${n1}`);
+  console.log("\n");
+};
+
+findStrongNumbers(1, 200);
+
+console.log("\n");
+console.log("Soal Nomor 49");
+// soal 49
+
+let findout = (a, b, c) => {
+  let s1 = 0;
+  console.log(`Masukan nomor awal: ${a}`);
+  console.log(`Masukan jumlah seri nya: ${b}`);
+  console.log(`Masukan perbedaan dari nomor seri nya ${c}`);
+  s1 = (b * (2 * a + (b - 1) * c)) / 2;
+  let ln = a + (b - 1) * c;
+  for (let i = a; i <= ln; i += c) {
+    if (i != ln) {
+      console.log(`${i}`);
+    } else {
+      console.log(`\n ${(i, s1)}`);
+    }
+  }
+};
+findout(1, 10, 4);
