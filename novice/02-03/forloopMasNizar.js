@@ -831,3 +831,22 @@ let findout = (a, b, c) => {
   }
 };
 findout(1, 10, 4);
+
+console.log("\n");
+console.log("Soal Nomor 50");
+// soal 50
+
+let convertDecimal = (n) => {
+  let o = 0;
+  let dn = n;
+  let i = 1;
+  console.log(`Masukan nomor yang akan di convert: ${n}`);
+  for (let j = n; j > 0; j /= 8) {
+    o += (j % 8) * i;
+    console.log(o);
+    i *= 10;
+    n /= 8;
+  }
+  console.log(`Octal dari ${dn} adalah ${o}`);
+};
+convertDecimal(79);
