@@ -204,3 +204,305 @@ console.log(arrayBaru());
 console.log("\n");
 console.log("Soal Nomor 13");
 // soal 13
+
+let x = 0;
+let array = Array();
+
+let menambahArray = () => {
+  array[x] = document.getElementById("tes1").value;
+  alert(`Element ${array[x]} telah ditambahkan ke index ${x}`);
+  x++;
+  document.getElementById("tes1").value = "";
+};
+
+let melihatArray = () => {
+  let e = "<hr/>";
+
+  for (let y = 0; y < array.length; y++) {
+    e += `Element ${y} = ${array[y]} <br/>`;
+  }
+  document.getElementById("hasil").innerHTML = e;
+};
+
+console.log("\n");
+console.log("Soal Nomor 14");
+// soal 14
+
+let hapusDuplikat = (num) => {
+  let x,
+    len = num.length,
+    out = [],
+    obj = {};
+
+  for (x = 0; x < len; x++) {
+    obj[num[x]] = 0;
+    // console.log(obj);
+  }
+  for (x in obj) {
+    out.push(x);
+  }
+  return out;
+};
+let Mynum = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+let result1 = hapusDuplikat(Mynum);
+console.log(Mynum);
+console.log(result1.join(","));
+
+console.log("\n");
+console.log("Soal Nomor 15");
+// soal 15
+
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+
+function Ordinal(n) {
+  let o = ["th", "st", "nd", "rd"],
+    x = n % 100;
+  // console.log(x);
+  return x + (o[(x - 20) % 10] || o[x] || o[0]);
+}
+
+for (n = 0; n < color.length; n++) {
+  let ordinal = n + 1;
+
+  let output = Ordinal(ordinal) + " choice is " + color[n] + ".";
+
+  console.log(output);
+}
+
+console.log("\n");
+console.log("Soal Nomor 16");
+// soal 16
+
+function tahun_tahun(a, b) {
+  let jarak_tahun = [];
+  for (let i = a; i <= b; i += 4) {
+    jarak_tahun.push(i);
+  }
+  console.log(jarak_tahun);
+}
+tahun_tahun(2000, 2012);
+
+console.log("\n");
+console.log("Soal Nomor 17");
+// soal 17
+
+function acak(n) {
+  let ctr = n.length,
+    temp,
+    index;
+  while (ctr > 0) {
+    index = Math.floor(Math.random() * ctr);
+    // console.log(index);
+    ctr--;
+    temp = n[ctr];
+    n[ctr] = n[index];
+    n[index] = temp;
+  }
+  return n;
+}
+let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(acak(myArray));
+
+console.log("\n");
+console.log("Soal Nomor 18");
+// soal 18
+
+function binary_Search(items, value) {
+  let firstIndex = 0,
+    lastIndex = items.length - 1,
+    middleIndex = Math.ceil((lastIndex + firstIndex) / 2);
+
+  while (items[middleIndex] != value && firstIndex < lastIndex) {
+    if (value < items[middleIndex]) {
+      lastIndex = middleIndex - 1;
+    } else if (value > items[middleIndex]) {
+      firstIndex = middleIndex + 1;
+    }
+    middleIndex = Math.ceil((lastIndex + firstIndex) / 2);
+  }
+
+  return items[middleIndex] != value ? -1 : middleIndex;
+}
+let items = [1, 2, 3, 4, 5, 7, 8, 9];
+console.log(binary_Search(items, 1));
+console.log(binary_Search(items, 5));
+
+console.log("\n");
+console.log("Soal Nomor 19");
+// soal 19
+
+let totalDuaArray = (a, b) => {
+  let arr = [];
+  let ctr = 0;
+  while (ctr < a.length && ctr < b.length) {
+    arr.push(a[ctr] + b[ctr]);
+    ctr++;
+  }
+  return arr;
+};
+console.log(totalDuaArray([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
+
+console.log("\n");
+console.log("Soal Nomor 20");
+// soal 20
+
+let mencariDuplikat = () => {
+  const abaru = [1, 2, -2, 4, 5, 4, 7, 8, 7, 71, 7, 3, 6];
+  const set1 = [...new Set(abaru.filter((value, index, z) => z.indexOf(value) !== index))];
+  return set1;
+};
+console.log(mencariDuplikat());
+
+console.log("\n");
+console.log("Soal Nomor 21");
+// soal 21
+
+let flatten = (a) => {
+  let a1 = a.join().split(",").map(Number);
+  return a1;
+};
+console.log(flatten([1, [2], [3, [[4]]], [5, 6]]));
+console.log(flatten([1, [2], [3, [[4]]], [5, 6]], true));
+
+console.log("\n");
+console.log("Soal Nomor 22");
+// soal 22
+
+function union(arra1, arra2) {
+  let a = arra1.concat(arra2);
+  let b = [...new Set(a.filter((value, index, z) => z.indexOf(value) !== index[(1, 2)]))];
+  return b.sort();
+}
+console.log(union([1, 2, 3], [100, 2, 1, 10]));
+
+console.log("\n");
+console.log("Soal 23");
+// soal 23
+
+function differenceOf2Arrays(array1, array2) {
+  // let a = array1.filter((d) => !array2.includes(d));
+  // let b = array2.filter((x) => !array1.includes(x));
+  // let a = array1.join(",").toString();
+  let b = array2.toString().split(",").map(Number);
+  let b1 = b.filter((x) => !array1.includes(x));
+  let a1 = array1.filter((d) => !b.includes(d));
+  // console.log(a1);
+  // console.log(b);
+  // console.log(b);
+  // let hasil = [];
+  // hasil.push(b);
+  // console.log(a1);
+  let c = a1.concat(b1);
+  return c;
+
+  // let b1 = array2.filter((x) => !array1.includes(x));
+  // let c = a1.concat(b1);
+  // return c;
+}
+console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
+console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
+
+console.log("\n");
+console.log("Soal 24");
+// soal 24
+
+let filterArray = (arr) => {
+  let hasil = [];
+  if (arr == Number) {
+    arr >= 2;
+    hasil.push(arr);
+  }
+  return hasil;
+};
+
+console.log(filterArray([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+function filter_array(test_array) {
+  let index = 0;
+  let arr_length = test_array ? test_array.length : 0;
+  // console.log(arr_length);
+  let resIndex = -1;
+  let result = [];
+
+  while (index++ < arr_length) {
+    let value = test_array[index];
+    // console.log(value);
+
+    if (value) {
+      result[++resIndex] = value;
+    }
+  }
+
+  return result;
+}
+console.log(filter_array([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+console.log("\n");
+console.log("Soal 25");
+// soal 25
+
+let library = [
+  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+  { author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245 },
+];
+for (let i = library.length; i >= 0; i--) {
+  console.log(library[i]);
+}
+
+console.log("\n");
+console.log("Soal 26");
+// soal 26
+
+function twoSum(nums, target_num) {
+  const indexnum = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target_num) {
+        indexnum.push(nums[i], nums[j]);
+        return indexnum;
+      }
+    }
+  }
+}
+console.log(twoSum([10, 20, 10, 40, 50, 60, 70], 50));
+
+console.log("\n");
+console.log("Soal 27");
+// soal 27
+
+var librarys = [
+  { author: "Bill Gates", title: "The Road Ahead", libraryID: 1254 },
+  { author: "Steve Jobs", title: "Walter Isaacson", libraryID: 4264 },
+  { author: "Suzanne Collins", title: "Mockingjay: The Final Book of The Hunger Games", libraryID: 3245 },
+];
+
+librarys.forEach((i) => {
+  console.log(`Title => ${[i.title]}, Author => ${[i.author]}`);
+  // console.log(`author => ${[i.author]}`);
+});
+
+console.log("\n");
+console.log("Soal 28");
+// soal 28
+
+let panjangString = (arr) => {
+  let a1 = arr.concat().sort();
+  let a = a1;
+  if (arr[0] == "g" && arr[0] == "S") {
+    for (let i = 0; i < a.length; i++) {}
+    return a[i].charAt(0, i);
+  } else {
+    return arr;
+  }
+};
+console.log(panjangString(["go", "google"]));
+
+console.log(panjangString(["SQLInjection", "SQLTutorial"]));
+
+console.log(panjangString(["abcd", "1234"]));
+
+console.log("\n");
+console.log("Soal 29");
+// soal 29
